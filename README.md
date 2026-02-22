@@ -1,4 +1,4 @@
-# Lab 08: SonarQube — rentgen kodu
+# Lab 08: SonarQube - rentgen kodu
 
 ## Czy wiesz, że...
 
@@ -6,9 +6,9 @@ Według badań (które właśnie wymyśliłem), 82% programistów po pierwszym u
 
 ## Kontekst
 
-Przez ostatnie cztery laby pisaliście własne skrypty do mierzenia kodu. To fajne i pouczające, ale w realnym świecie nikt nie pisze od zera analizatora metryk — używa gotowych platform. SonarQube to jedna z najpopularniejszych: open-source'owa platforma do ciągłej inspekcji jakości kodu.
+Przez ostatnie cztery laby pisaliście własne skrypty do mierzenia kodu. To fajne i pouczające, ale w realnym świecie nikt nie pisze od zera analizatora metryk - używa gotowych platform. SonarQube to jedna z najpopularniejszych: open-source'owa platforma do ciągłej inspekcji jakości kodu.
 
-SonarQube robi wszystko to, co robiliście ręcznie (LOC, złożoność, duplikacje) — plus rzeczy, których nie robiliście (analiza bezpieczeństwa, wykrywanie bugów, code smells). I robi to automatycznie, przy każdym buildzie, z ładnym dashboardem w przeglądarce.
+SonarQube robi wszystko to, co robiliście ręcznie (LOC, złożoność, duplikacje) - plus rzeczy, których nie robiliście (analiza bezpieczeństwa, wykrywanie bugów, code smells). I robi to automatycznie, przy każdym buildzie, z ładnym dashboardem w przeglądarce.
 
 ## Cel laboratorium
 
@@ -52,7 +52,7 @@ docker compose logs sonarqube | tail -20
 
 - Login: `admin`
 - Hasło: `admin`
-- SonarQube poprosi o zmianę hasła — zmieńcie na coś prostego (np. `sonar123`)
+- SonarQube poprosi o zmianę hasła - zmieńcie na coś prostego (np. `sonar123`)
 
 **Krok 4:** Stwórzcie nowy projekt:
 
@@ -90,17 +90,17 @@ Analiza potrwa kilka minut. Po zakończeniu odświeżcie dashboard w przeglądar
 Czas na czytanie "wyników badań" naszego "pacjenta".
 
 **Krok 1:** Przejrzyjcie dashboard projektu na http://localhost:9000. Zobaczcie:
-- **Overview** — ogólny stan
-- **Issues** — lista problemów
-- **Measures** — szczegółowe metryki
-- **Code** — przeglądarka kodu z adnotacjami
+- **Overview** - ogólny stan
+- **Issues** - lista problemów
+- **Measures** - szczegółowe metryki
+- **Code** - przeglądarka kodu z adnotacjami
 
 **Krok 2:** Odpowiedźcie na pytania (zapiszcie w `answers.md`):
 
 1. **Reliability (Bugs):**
    - Ile bugów znalazł SonarQube?
    - Jaki rating (A-E)?
-   - Podaj przykład jednego buga — co to jest i dlaczego SonarQube go flaguje?
+   - Podaj przykład jednego buga - co to jest i dlaczego SonarQube go flaguje?
 
 2. **Security (Vulnerabilities):**
    - Ile vulnerabilities?
@@ -130,7 +130,7 @@ Czas na czytanie "wyników badań" naszego "pacjenta".
 - Czy złożoność się zgadza z `radon`?
 - Co SonarQube znalazł, czego wasze skrypty nie złapały?
 
-### Zadanie 3: Własny Quality Gate (30 min) — dla ambitnych
+### Zadanie 3: Własny Quality Gate (30 min) - dla ambitnych
 
 Domyślny Quality Gate SonarQube to "Sonar way". Stwórzcie własny z ostrzejszymi progami.
 
@@ -151,8 +151,8 @@ Domyślny Quality Gate SonarQube to "Sonar way". Stwórzcie własny z ostrzejszy
 
 W swoim branchu `lab08_nazwisko1_nazwisko2`:
 
-1. **`answers.md`** — odpowiedzi na pytania z zadania 2 (ze screenshotami lub skopiowanymi metrykami)
-2. **`docker-compose.yml`** — konfiguracja SonarQube (może być kopia z repozytorium z ewentualnymi modyfikacjami)
+1. **`answers.md`** - odpowiedzi na pytania z zadania 2 (ze screenshotami lub skopiowanymi metrykami)
+2. **`docker-compose.yml`** - konfiguracja SonarQube (może być kopia z repozytorium z ewentualnymi modyfikacjami)
 3. *(opcjonalnie)* opis własnego Quality Gate z zadania 3
 
 ## Kryteria oceny
@@ -175,10 +175,10 @@ O: Sprawdź czy SonarQube działa: `curl http://localhost:9000/api/system/status
 O: Dla dużych projektów (django) to normalne (5-10 min). requests powinien być szybki (1-2 min). Jeśli trwa >15 min, sprawdź logi: `docker compose logs sonar-scanner`.
 
 **P: SonarQube pokazuje 0 bugów. Czy to normalne?**
-O: Dla dobrze utrzymanego projektu jak requests — tak, to możliwe. Code smells powinny się pojawić. Jeśli naprawdę nic nie widać, sprawdź czy scanner przeanalizował właściwe pliki (logi scannera).
+O: Dla dobrze utrzymanego projektu jak requests - tak, to możliwe. Code smells powinny się pojawić. Jeśli naprawdę nic nie widać, sprawdź czy scanner przeanalizował właściwe pliki (logi scannera).
 
 **P: Nie mogę postawić SonarQube na swoim laptopie (za mało RAM).**
-O: Pracuj z partnerem/partnerką na mocniejszej maszynie. Alternatywa: użyj SonarCloud (lab09) — nie wymaga lokalnej instalacji.
+O: Pracuj z partnerem/partnerką na mocniejszej maszynie. Alternatywa: użyj SonarCloud (lab09) - nie wymaga lokalnej instalacji.
 
 ## Przydatne linki
 
@@ -189,4 +189,4 @@ O: Pracuj z partnerem/partnerką na mocniejszej maszynie. Alternatywa: użyj Son
 - [Python analysis rules](https://rules.sonarsource.com/python/)
 
 ---
-*"SonarQube to jak wizyta u dentysty — wiesz, że musisz iść, nie chcesz znać wyników, ale potem jest lepiej."* — anonimowy developer (źródło: trust me bro)
+*"SonarQube to jak wizyta u dentysty - wiesz, że musisz iść, nie chcesz znać wyników, ale potem jest lepiej."* - anonimowy developer (źródło: trust me bro)
