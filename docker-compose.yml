@@ -17,7 +17,7 @@ services:
     depends_on:
       - sonarqube
     volumes:
-      - /tmp/requests:/src
+      - ../repos/yt-dlp:/src
     profiles:
       - scanner
 
