@@ -13,13 +13,10 @@ services:
 
   sonar-scanner:
     image: sonarsource/sonar-scanner-cli:latest
-    container_name: sonar-scanner
     depends_on:
       - sonarqube
     volumes:
-      - /tmp/requests:/src
-    profiles:
-      - scanner
+      - ./requests-src:/src
 
 volumes:
   sonarqube_data:
