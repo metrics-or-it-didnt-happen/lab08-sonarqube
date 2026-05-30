@@ -17,7 +17,7 @@ services:
     depends_on:
       - sonarqube
     volumes:
-      - /tmp/requests:/src
+      - /../httpx:/src
     profiles:
       - scanner
 
